@@ -15,7 +15,7 @@ def main():
 
 @app.route('/move/<thinger>', methods=['GET'])
 def move_hand(thinger):
-    ser_interface.write(bytes(thinger))
+    ser_interface.write(bytes(thinger[0]))
     return render_template("main.html")
 
 if __name__ == '__main__':
